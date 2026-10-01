@@ -1,0 +1,74 @@
+:root{
+    --amarelo: #fff0a8;
+    --rosa: #ffc2df;
+    --branco: #fff;
+    --azul: #bae1ff;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background-image: url('../assets/images/fundo.png');
+    background-size: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8em;
+}
+ 
+h1{
+    text-shadow: -4px -1px 0px #6498c0;
+}
+ 
+.teclado{
+    background: linear-gradient(to bottom, #fff1f8 0%, #fff1f8 100% );
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: -9px 6px 1px #bae1ff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+ 
+.tecla{
+    background-color: var(--branco);
+    box-shadow: -4px 1px 7px #e5b1ca;
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bold;
+    color: #3f212f;
+    cursor: pointer;
+    border: solid 1px #3f212f;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+ 
+.tecla.ativa,
+.tecla:active{
+    background-color:  var(--branco);
+    border: solid 1px #3f212f;
+    box-shadow: 3px 3px 0  #3f212f inset;
+    color: #3f212f;
+    outline: none;
+}
+ 
+.tecla.focus,
+.tecla:focus{
+    outline: none;
+    box-shadow: -4px 1px 7px #3f212f;
+}
+ 
+.tecla.ativa:focus,
+.tecla.active:focus{
+    box-shadow: -4px 1px 7px  #3f212f  inset, 1px 1px 10px var(--azul)
+}
